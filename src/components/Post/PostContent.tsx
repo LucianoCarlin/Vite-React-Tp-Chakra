@@ -1,8 +1,12 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Box, Button, Link, Text, Textarea } from "@chakra-ui/react";
 import { PostContentStyles } from "./PostContentStyle";
 
-export function PostContent() {
+interface PostContentProps {
+  text: string;
+}
+
+export function PostContent({ text }: PostContentProps) {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleChangeTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -12,13 +16,15 @@ export function PostContent() {
       setIsVisible(true);
     }
   };
+
+  const handleCreateNewComment = (e: FormEvent) => {
+    e.preventDefault;
+    console.log("oi");
+  };
   return (
     <Box mt="1.5rem">
       <PostContentStyles text="Fala galeraa" />
-      <PostContentStyles
-        text="Acabei de subir mais um projeto no meu portifa. É um projeto que fiz
-        aqui em casa"
-      />
+      <PostContentStyles text={text} />
       <PostContentStyles text="Luciano Alves" />
       <PostContentStyles text="#rocketseat" link={true} />
 
@@ -28,6 +34,7 @@ export function PostContent() {
         mt="1.5rem"
         pt="1.5rem"
         borderTop="1px solid #4A5568"
+        onSubmit={handleCreateNewComment}
       >
         <Text lineHeight="1.6" color="gray.200">
           Deixe seu feedback
@@ -49,6 +56,7 @@ export function PostContent() {
         />
 
         <Button
+          type="submit"
           paddingX={4}
           paddingY={6}
           mt="1rem"

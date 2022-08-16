@@ -14,7 +14,7 @@ export function Layout({ children }: LayoutProps) {
       paddingX="1rem"
       paddingY="0"
       display="grid"
-      gridTemplateColumns="16rem 1fr"
+      gridTemplateColumns={["1fr", "1fr", "16rem 1fr"]}
       gap="2rem"
       alignItems="flex-start"
     >

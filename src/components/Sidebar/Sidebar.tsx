@@ -13,7 +13,7 @@ export function Sidebar() {
         borderTopLeftRadius="8px"
       />
       <Flex alignItems="center" flexDir="column" mt="-1.5rem">
-        <Avatar />
+        <Avatar src="https://github.com/lucianocarlin.png" hasBorder />
         <Text mt="1rem" color="gray.100" lineHeight="1.6">
           Luciano Alves
         </Text>

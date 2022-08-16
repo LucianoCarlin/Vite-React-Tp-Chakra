@@ -5,7 +5,7 @@ import { Avatar } from "../Avatar";
 export function Comment() {
   return (
     <Flex mt="1.5rem" gap="1rem">
-      <Avatar />
+      <Avatar src="https://github.com/lucianocarlin.png" />
       <Box flex={1}>
         <Box bgColor="gray.700" borderRadius="8px" p="1rem">
           <Flex

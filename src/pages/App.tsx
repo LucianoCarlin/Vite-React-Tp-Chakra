@@ -14,7 +14,6 @@ export function App() {
           <Sidebar />
           <Box as="main">
             <Post />
-            <Post />
           </Box>
         </Layout>
       </Box>

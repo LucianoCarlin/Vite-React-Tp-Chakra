@@ -1,14 +1,19 @@
 import { Image } from "@chakra-ui/react";
 
-export function Avatar() {
+interface AvatarProps {
+  src: string;
+  hasBorder?: boolean;
+}
+
+export function Avatar({ src, hasBorder = false }: AvatarProps) {
   return (
     <Image
-      src="https://github.com/lucianocarlin.png"
+      src={src}
       width="3rem"
       height="3rem"
       borderRadius="8px"
-      border="2px solid #2a2a2a"
-      outline="2px solid #22543D"
+      border={hasBorder ? "2px solid #2a2a2a" : "none"}
+      outline={hasBorder ? "2px solid #22543D" : "none"}
       boxSizing="initial"
     />
   );
